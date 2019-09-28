@@ -36,4 +36,13 @@ package Functions
   );
   end getDerivativeF90;
 
+  function getDerivativeF03
+    extends getDerivativeInterface;
+  external "C" getDerivativeF03(
+    p, r, b, x, y, z, der_x, der_y, der_z
+  ) annotation (
+    Library="lorenz"
+  );
+  end getDerivativeF03;
+
 end Functions;
