@@ -18,4 +18,13 @@ package Functions
   );
   end getDerivativeC;
 
+  function getDerivativeF77
+    extends getDerivativeInterface;
+  external "FORTRAN 77" getder(
+    p, r, b, x, y, z, der_x, der_y, der_z
+  ) annotation (
+    Library="lorenz"
+  );
+  end getDerivativeF77;
+
 end Functions;
