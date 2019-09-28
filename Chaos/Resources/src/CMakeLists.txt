@@ -3,6 +3,7 @@ add_library(
     lorenz
     STATIC
     lorenz.c
+    lorenz.f
 )
 
 set_target_properties(lorenz
