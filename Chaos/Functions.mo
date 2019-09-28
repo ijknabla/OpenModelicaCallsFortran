@@ -27,4 +27,13 @@ package Functions
   );
   end getDerivativeF77;
 
+  function getDerivativeF90
+    extends getDerivativeInterface;
+  external "FORTRAN 77" get_derivative_f90(
+    p, r, b, x, y, z, der_x, der_y, der_z
+  ) annotation (
+    Library="lorenz"
+  );
+  end getDerivativeF90;
+
 end Functions;
