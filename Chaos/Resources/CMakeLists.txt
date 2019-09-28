@@ -10,3 +10,5 @@ include(OpenModelicaResources)
 
 enable_language(Fortran)
 
+add_subdirectory(src)
+
