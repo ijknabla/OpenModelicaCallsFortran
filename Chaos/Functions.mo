@@ -8,5 +8,14 @@ package Functions
     input Real p, r, b, x, y, z;
     output Real der_x, der_y, der_z;
   end getDerivativeInterface;
+  
+  function getDerivativeC
+    extends getDerivativeInterface;
+  external "C" getDerivativeC(
+    p, r, b, x, y, z, der_x, der_y, der_z
+  ) annotation (
+    Library="lorenz"
+  );
+  end getDerivativeC;
 
 end Functions;
